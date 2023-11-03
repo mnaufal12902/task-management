@@ -10,7 +10,7 @@ export const authOptions = {
 
       async authorize(credentials) {
         const { username, password } = credentials;
-        const urlAuth = "http://localhost:4000/auth";
+        const urlAuth = "http://localhost:4000/aut";
 
         try {
           const response = await axios.post(urlAuth, {
@@ -32,7 +32,7 @@ export const authOptions = {
       },
     }),
   ],
-
+  baseUrl: process.env.NEXTAUTH_URL,
   session: {
     strategy: "jwt",
     maxAge: 60 * 60,
@@ -41,6 +41,7 @@ export const authOptions = {
   pages: {
     signIn: "/login",
   },
+  
   callbacks: {
     async session({ session, token }) {
       session.user = token.user;

@@ -32,6 +32,8 @@ export default function LoginForm() {
         password: formData.password,
         redirect: false,
       });
+
+      console.log(res)
       
       if (res.error) {
         setLoading(false);
