@@ -18,6 +18,8 @@ export const authOptions = {
             Pass: password,
           });
 
+          console.log(response);
+
           const user = response.data.user;
 
           if (response.data.ok && user) {
