@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import Task from "../Task/task.jsx";
 import SKtask from "../Skeleton/SKtask.jsx";

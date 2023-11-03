@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { TasksProvider } from "../app/TaskContext";
 import { Toaster } from "sonner";
-import {AuthProvider} from './providers'
+import {AuthProvider} from './Providers'
 
 const inter = Inter({ subsets: ["latin"] });
 

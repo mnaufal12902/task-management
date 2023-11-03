@@ -1,9 +1,8 @@
 "use client";
 import FilterbarTask from "../../components/Filterbar/filterbarTask.jsx";
-import Navbar from "../../components/Navbar/navbar.jsx";
 import { useEffect, useState, useContext } from "react";
 import { useTaskDispatch, useTasks } from "../TaskContext.js";
-import Taskcard from "../../components/taskcard/taskcard.jsx";
+import Taskcard from "../../components/Taskcard/taskcard.jsx";
 import TaskCardSC from "../../components/Taskcard/taskcardSC.jsx";
 import { getTask, getTaskSC } from "../../data/Task.js";
 import { toast } from "sonner";
