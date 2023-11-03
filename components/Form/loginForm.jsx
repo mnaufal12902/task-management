@@ -5,7 +5,7 @@ import { RiSparkling2Line } from "react-icons/ri";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
-export default function loginForm() {
+export default function LoginForm() {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     username: "",
