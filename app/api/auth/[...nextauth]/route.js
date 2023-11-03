@@ -26,6 +26,7 @@ export const authOptions = {
             return null;
           }
         } catch (error) {
+          console.log(error)
           throw new Error(error.response.data.message);
         }
       },
