@@ -33,8 +33,6 @@ export default function LoginForm() {
         redirect: false,
       });
 
-      console.log(res)
-      
       if (res.error) {
         setLoading(false);
         return toast.error(res.error);
