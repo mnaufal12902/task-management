@@ -26,7 +26,7 @@ export default function Taskcard(props) {
   const randColor = ["#2d5abc", "#78d9e4", "#fa9e60", "#0d1b3e", "#ed2b43"];
 
   return (
-    <div className="flex border relative w-[35%] h-full bg-white rounded-lg shadow-md max-md:w-[80%] max-md:h-[50vh]">
+    <div className="flex border relative w-[35%] h-[55vh] bg-white rounded-lg shadow-md max-md:w-[80%] max-md:h-[50vh]">
       <div className="flex w-full relative flex-col gap-4 p-4">
         <div>
           <h1 className="text-lg font-semibold">{day}</h1>

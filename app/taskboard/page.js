@@ -1,6 +1,6 @@
 "use client";
 import FilterbarTask from "../../components/Filterbar/filterbarTask.jsx";
-import { useEffect, useState, useContext } from "react";
+import { useEffect, useState } from "react";
 import { useTaskDispatch, useTasks } from "../TaskContext.js";
 import Taskcard from "../../components/Taskcard/taskcard.jsx";
 import TaskCardSC from "../../components/Taskcard/taskcardSC.jsx";
@@ -72,7 +72,6 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      console.log(username)
       const resultTask = await getTask();
       const resultTaskSC = await getTaskSC(username);
       setDataTaskSC(resultTaskSC);

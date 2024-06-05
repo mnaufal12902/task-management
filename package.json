@@ -27,7 +27,9 @@
     "next-auth": "^4.24.4",
     "nextjs-progressbar": "^0.0.16",
     "nextjs-toploader": "^1.5.3",
+    "node-localstorage": "^3.0.5",
     "postcss": "8.4.31",
+    "primereact": "^10.0.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
@@ -41,6 +43,7 @@
   },
   "devDependencies": {
     "@types/node": "20.8.0",
-    "@types/react": "18.2.23"
+    "@types/react": "18.2.23",
+    "sass": "^1.69.5"
   }
 }

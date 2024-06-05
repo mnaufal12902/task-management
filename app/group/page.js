@@ -15,18 +15,17 @@ import { useSession } from "next-auth/react";
 export default function Page() {
   const [group, setGroup] = useState([]);
   const [idMatkul, setIdMatkul] = useState(null);
-  const [filterGroup, setFilter] = useState("");
   const [admin, setAdmin] = useState(false);
 
-  const newGroup = useTasks().newGroup;
   const dispatch = useTaskDispatch();
   const { data: session } = useSession();
+  const sesi = useSession();
 
   useEffect(() => {
-    if (session?.user?.role === "Ketua Kelas") {
+    if (session?.user?.role === "Ketua Kelas" || session?.user?.role === "Staff Kelas") {
       setAdmin(true);
-    }
-  }, [session]);
+    } 
+}, [session]);
 
   const getGroup = (data) => {
     setGroup(data);
@@ -67,7 +66,7 @@ export default function Page() {
     <main className="flex w-full justify-center bg-white">
       <div className="flex w-[96%] h-[77vh] rounded-b-2xl bg-[#f3f6ff]">
         <div className="flex w-full flex-col relative">
-          <div className="flex w-[97%] h-[60vh] rounded-lg gap-4 flex-col mx-6 pt-8 max-md:mx-2 max-md:h-full">
+          <div className="flex w-[97%] h-[75vh] rounded-lg gap-4 flex-col mx-6 pt-8 max-md:mx-2 max-md:h-full">
             <NavbarGroup
               sendData={getGroup}
               sendIdMatkul={getIdMatkul}

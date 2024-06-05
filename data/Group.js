@@ -73,6 +73,7 @@ export async function createGroup(data) {
     const response = await axios.post(endpointGroup, data);
     return response;
   } catch (error) {
+    console.log(error);
     return error;
   }
 }

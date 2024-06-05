@@ -4,6 +4,7 @@ import NextTopLoader from "nextjs-toploader";
 import { TasksProvider } from "../app/TaskContext";
 import { Toaster } from "sonner";
 import {AuthProvider} from './Providers'
+import { PrimeReactProvider } from 'primereact/api';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} bg-white`}>
         <AuthProvider>
-          <TasksProvider>
-              <Toaster richColors />
-              <NextTopLoader showSpinner={false} color="#6e9fff" />
-              {children}
-          </TasksProvider>
+          <PrimeReactProvider>
+            <TasksProvider>
+                <Toaster richColors />
+                <NextTopLoader showSpinner={false} color="#6e9fff" />
+                {children}
+            </TasksProvider>
+          </PrimeReactProvider>
         </AuthProvider> 
       </body>
     </html>

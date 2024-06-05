@@ -14,7 +14,6 @@ export async function getTask() {
 export async function getTaskSC(username) {
   try {
     const response = await axios.get(`http://localhost:4000/task_succes?username=${username}`);
-    console.log(username)
     return response.data.data;
   } catch (error) {
     throw error;

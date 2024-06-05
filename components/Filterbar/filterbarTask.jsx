@@ -7,17 +7,17 @@ import { useSession } from "next-auth/react";
 
 export default function Filterbar(props) {
   const { sendDay, sendFilter } = props;
-  const [admin, setAdmin] = useState(false);
+  const [admin, setAdmin] = useState();
   const [day, setDay] = useState("Semua");
   const [inputFilter, setInputfilter] = useState("");
 
   const {data:session} = useSession();
 
-    useEffect(() => {
-    if (session?.user?.role === "Ketua Kelas") {
+  useEffect(() => {
+    if (session?.user?.role === "Ketua Kelas" || session?.user?.role === "Staff Kelas") {
       setAdmin(true);
-    }
-  }, [session]);
+    } 
+}, [session]);
 
 
   const handleChange = (e) => {

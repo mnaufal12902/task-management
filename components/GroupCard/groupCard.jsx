@@ -16,7 +16,7 @@ export default function GroupCard(props) {
   const { data: session } = useSession();
 
   useEffect(() => {
-    if (session?.user?.role === "Ketua Kelas") {
+    if (session?.user?.role === "Ketua Kelas" || "Staff Kelas") {
       setAdmin(true);
     }
   }, [session]);

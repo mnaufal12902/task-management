@@ -9,7 +9,6 @@ export default function GroupTaskCard() {
   const [groupTask, setGroupTask] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const dispatch = useTaskDispatch();
   const {dataGroupTask} = useTasks();
 
   const fetchTask = async () => {

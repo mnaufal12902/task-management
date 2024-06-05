@@ -20,10 +20,10 @@ export default function NavbarGroup(props) {
   const { data: session } = useSession();
 
   useEffect(() => {
-    if (session?.user?.role === "Ketua Kelas") {
+    if (session?.user?.role === "Ketua Kelas" || session?.user?.role === "Staff Kelas") {
       setAdmin(true);
-    }
-  }, [session]);
+    } 
+}, [session]);
 
   const fetchData = async () => {
     try {

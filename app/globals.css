@@ -24,6 +24,38 @@ body {
   border-bottom: 2px solid #3b7eff;
 }
 
+/* Loader */
+.loader-small {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #3b7eff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+.loader-white-small {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+  } 
+
 /* width */
 ::-webkit-scrollbar {
   width: 4px;

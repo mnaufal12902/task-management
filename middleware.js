@@ -1,3 +1,3 @@
 export {default} from "next-auth/middleware"
 
-export const config = {matcher: ["/taskboard", "/group"]}
+export const config = {matcher: ["/taskboard", "/group", "/users"]}

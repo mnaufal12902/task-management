@@ -26,6 +26,12 @@ export function useTaskDispatch() {
 
 function tasksReducer(tasks, action) {
   switch (action.type) {
+    case "CREATE SESSION": {
+      return {...tasks, user:action.user}
+    }
+    case "CREATE_TOKEN": {
+      return {...tasks, token:action.token}
+    }
     case "CREATE_DATA": {
       return { ...tasks, newData: true };
     }
@@ -49,9 +55,14 @@ function tasksReducer(tasks, action) {
 }
 
 const initialTasks = {
+  user: {
+    nama: "",
+    username: "",
+    role: ""
+  },
+  token: null,
   dataGroupTask: {},
   newData: false,
   newGroup: false,
-  username: "mnaufal12902",
   index: 1
 };

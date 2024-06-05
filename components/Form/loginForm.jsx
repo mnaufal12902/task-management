@@ -33,7 +33,8 @@ export default function LoginForm() {
         redirect: false,
       });
 
-      console.log(res);
+      console.log(res)
+
 
       if (res.error) {
         setLoading(false);

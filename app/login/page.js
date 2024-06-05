@@ -13,7 +13,7 @@ export default async function Login() {
   if (session) redirect("/taskboard");
   return (
     <div className="flex w-full relative h-screen justify-center items-center bg-[#f3f6ff]">
-      <div className="flex border relative w-[60%] h-[70vh] rounded-lg shadow-md bg-white max-md:w-[80%] max-md:h-[60vh]">
+      <div className="flex border relative w-[60%] h-[70vh] rounded-2xl shadow-md bg-white max-md:w-[80%] max-md:h-[60vh]">
         <div className="flex w-[50%] relative border-r-2 justify-center items-center max-md:hidden">
           <div className="">
             <Image

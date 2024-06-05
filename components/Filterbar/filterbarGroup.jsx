@@ -9,9 +9,6 @@ export default function FilterbarGroup(props) {
   const [admin, setAdmin] = useState(false);
   const [inputFilter, setInputfilter] = useState("");
 
-  const { data:session } = useSession();
-  console.log(session)
-  console.log("hello")
 
   const handleChange = (e) => {
     setInputfilter(e.target.value);

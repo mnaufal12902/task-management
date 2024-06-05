@@ -50,7 +50,6 @@ export default function TaskForm(props) {
       if (response.status !== 201) {
         return toast.error("Error : Gagal membuat data");
       }
-      console.log("Halaman Group");
     }
 
     dispatch({

@@ -10,7 +10,7 @@ export const authOptions = {
 
       async authorize(credentials) {
         const { username, password } = credentials;
-        const urlAuth = "http://localhost:4000/aut";
+        const urlAuth = "http://localhost:4000/auth";
 
         try {
           const response = await axios.post(urlAuth, {
@@ -18,7 +18,6 @@ export const authOptions = {
             Pass: password,
           });
 
-          console.log(response);
 
           const user = response.data.user;
 
@@ -28,7 +27,6 @@ export const authOptions = {
             return null;
           }
         } catch (error) {
-          console.log(error)
           throw new Error(error.response.data.message);
         }
       },
